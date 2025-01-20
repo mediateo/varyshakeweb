@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sketch</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script src="libraries/p5.min.js"></script>
+    <script src="libraries/p5.sound.min.js"></script>
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.59/build/spline-viewer.js"></script>
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.59/build/spline-viewer.js" async></script>
+    <spline-viewer loading-anim-type="spinner-big-light" url="https://prod.spline.design/KJ5zuob00bIzxv9D/scene.splinecode"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAA2CAYAAAAxpDyoAAAAAXNSR0IArs4c6QAABnNJREFUeF7tXNlyIzcMzDys7/P/P9YpKUsVBPVFzjhxUtkX2xoNAaLR3eCs7O3x8fHrj/Zv27bLK8n39favr7+WQ1/ra/16XaPHHD+fvtbvxz31/WPdkYPKp+/79DOLhWLXuGMtFf90zdVg+y8BUouhAOnvQ83QAfhxgDCm9C5zHcIKtYcho7N77M5UxcrOtu8CxDH3hiGJRCGqppT9LkBYYziJYHK9CoiSa5fL6foFkF7kBBikwd/NkK7zKIfEw9h9ez2Exa6NyHztvLenp6clU2cbUjLhOoRp+QChG3rC1G6kNb/E1NVAkcZPwBi1uQFEeYVKoG6OFf7vAsRNVjOmfiQgzj/Ojff8/HzDkCoL/ftufsw7EFP2AtKZgnJzxn4UQ5LmdKN/z+XsIR0Q5SUMnA4KS+QoQFjDoLFXafqKZKFz0MgHMS8Bpea4vby8WIY4IP5pQFBhnWwxD+wSpX6eUQsmV50lN4AgKib0RPTrjFhhSG2GOoqqJklkSwHiQEkkHeWQsHV7fX2FDFnxDuQbtTOOAGSmGAqYowBxzYoOo+q1G0BYgGTEOxKQzgz0c5cM5yHO0EeMGYY4QBArkJpc9vL29jbFENZZSrPHWWCGIQwAZqo9rxV2fBcgDAA0BGwdkATxWRPdC4gDJwEjYUcKiJq0ai6MsZIh7+/vlCF18Q6UC4YMfZUhiVyxQiC9rgVBYz6SLHVAZH6LmoCZ/UWyGCAJU5RmHwFIyoyRq2uSsen+vv50YhYQVyuVVwdt+/j4iBjivCMx9FmG9M5Tj3WUjCqJQDGOBsQxpTbKjwckZcleH+m+MM489SvyGCVXKifmaf8qQBRj/gfkdwXcI4o6Ya1IlgMB6bc7JSN5+zEM+fz8lB6CZmVkjkedQ8Y66iGn8pLU2DsoDpAqV+i9zGPZ9EclywHCbmRGyVgwmDLuU48PLiNg8OmX+l7UPG7MrAVjZq5O7od7iAOEMcTJAgLASZYaR510zUxZrJvdIxNk8Ckg6ei7rQCizh+VOYoVTOKYlBwNCJJGdvhTE9cKIAocCYiTgL2y1cFznVs37w5jLDckwenBcABT/QTJa9+HU5Mr2WQMOQIM5BdItpRPKWY4UBKf6gVVPtIBcQ2SDhj1fTcMSTwj6T5l7srYHUvS0/pMV6LCIplyz7PGOq6ZUaNcGuPEkHS0RZ2MNo78QRm6io8kIQFlFpAOSgekyhRiCmskJsssP3lSTycDFdSBo9jGziIOEDd0JCx00uXkakZF6nshICnlZoKqiWsUCMVlxU8PhwlTjjD1ClDSEEy2rgCZAWIWDOYbrGCzUjWKOlOMq+nm9yE0ZUY/rTPWIYWQqsD+PySdENjiLhF2HW0MscFNWEnD9FhHHgxTb+15bh2QvUDM+omSK9XBVSJcd7KcFCDIxNXY63JQQ82Vh7APOaTAzEiEY42aVBIvqfcn3qHY6KYsZ+qMIU4Zbj7kkAKRSoIDgcVDksR0u783AaPH7WujU7k6qScMcbU4g8w+KKfMdvaa6oqjTD0piJNHBgoDBw0ePYYCAe39CpCZKStlEhrv1GtM193UhQBJmJJMWt1PnFwloKAanNdFH7ZOi91li8mYmjjQGgoUdljs98yC0QF3E5cCxU1YqiHp74ekxUYy4IrhZEqZbS2EGgJcXskAUY29smQPQ6yp198PQZKlzHsGtBmZcoCkoKRe19dLDJ7d41TilJNkCPodQ1fo2eszYJzeyw59avKqIM54IfKQzoAuX3sYUmuH6gL/cMDM5hSDnHS5OCkASn6UHyomIpYw2UriJyPvef3+lxyYbK2yYlby+ub2gDILxog9CwZjtAMB5bc9PDzYj5I6CVhhCQKYdZp6bqUOhY6BSbxVuUKxlaGPa9v9/b0FpCeejsUzkqVon5o4W0Ox3oGi2NIZhdZKQKj5TQHimOLOGzOsUPruwBvXZ+Q3eVTDwEHAsKZ1A852d3c3zRC04YQNK506C4yLoa6rQ6cCQ0kqk3NWr2VAZgFw7NorSwlrHFgoB/RAU72m5D1RkCVAEg9hgDnZct2WFN55nluj5oC+d9eZZEaA/Pr160qyXEFUpycBV7rUFfBIM9/DEpen849z7A5IXTQZKR0IiiluwnEbVFPNyr1s7zMsSZpD1UQCkmxKAaKkza3tmPqdYMyyJPG/xHMtQ1zR3ASxwo4RcxaQRAqT/bD4e1mSAvInePJ7a8pZYD4AAAAASUVORK5CYII=" alt="Spline preview" style="width: 100%; height: 100%;"/></spline-viewer>  <body>
+    <script src="sketch.js"></script>
+  </body>
+</html>
