@@ -1,17 +1,17 @@
-function setup() {
-  createCanvas(windowWidth, windowHeight);
-}
+// function setup() {
+//   createCanvas(windowWidth, windowHeight);
+// }
 
-function draw() {
-  fill(100);
-  textSize(32);
-  textAlign(CENTER, CENTER);
-  text(' ', width / 2, height / 2);
-}
+// function draw() {
+//   fill(100);
+//   textSize(32);
+//   textAlign(CENTER, CENTER);
+//   text(' ', width / 2, height / 2);
+// }
 
-function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
-}
+// function windowResized() {
+//   resizeCanvas(windowWidth, windowHeight);
+// }
 
 // DOM 요소 준비된 후 Spline 씬 로딩 이벤트를 감지
 // document.addEventListener('DOMContentLoaded', () => {
