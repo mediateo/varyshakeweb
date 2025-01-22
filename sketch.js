@@ -6,7 +6,7 @@ function draw() {
   fill(100);
   textSize(32);
   textAlign(CENTER, CENTER);
-  // text('Spline + p5.js', width/2, height/2);
+  text(' ', width/2, height/2);
 }
 
 function windowResized() {
