@@ -1,6 +1,7 @@
 function setup() {
   createCanvas(windowWidth, windowHeight);
   fill(255);
+
   textSize(200);
   textAlign(CENTER, CENTER);
 }
@@ -9,6 +10,13 @@ function draw() {
   clear();
   if(!window.splineLoaded){
   background(0,0,255);
+  let targetWidth = width * 0.8;
+  let textSizeValue = 200;
+  textSize(textSizeValue);
+  while (textWidth('loading...') > targetWidth) {
+    textSizeValue--;
+    textSize(textSizeValue);
+  }
   text('loading...', width / 2, height / 2);
 
   }
