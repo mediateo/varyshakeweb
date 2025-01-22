@@ -1,12 +1,17 @@
 function setup() {
   createCanvas(windowWidth, windowHeight);
+  fill(255);
+  textSize(200);
+  textAlign(CENTER, CENTER);
 }
 
 function draw() {
-  fill(100);
-  textSize(32);
-  textAlign(CENTER, CENTER);
-  text('test', width / 2, height / 2);
+  clear();
+  if(!window.splineLoaded){
+  background(0,0,255);
+  text('loading...', width / 2, height / 2);
+
+  }
 }
 
 function windowResized() {
