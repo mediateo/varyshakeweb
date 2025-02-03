@@ -1,47 +1,37 @@
-let texts = 'loading'; let t;
+let loadingText = 'loading';
+
 function setup() {
   createCanvas(windowWidth, windowHeight);
   fill(255);
-  textSize(500);
   textAlign(CENTER, CENTER);
-  t = createElement('h1', 'd');
-
 }
-
 
 function draw() {
   clear();
+
+  // Spline 씬이 아직 로드되지 않은 경우 로딩 화면 출력
   if (!window.splineLoaded) {
     background(0, 0, 255);
-    let targetWidth = width * 0.95;
-    let textSizeValue = 200;
-    textSize(textSizeValue);
-    while (textWidth(getLoadingText()) > targetWidth) {
-      textSizeValue--;
-      textSize(textSizeValue);
-    }
-    text(getLoadingText(), width / 2, height / 2);
+    const targetWidth = width * 0.95;
+    const baseSize = 200;
+
+    // 기본 크기로 텍스트를 측정한 후 너비 비율에 맞게 조정
+    textSize(baseSize);
+    const currentText = getLoadingText();
+    const currentWidth = textWidth(currentText);
+    const adjustedSize = currentWidth > 0 ? baseSize * (targetWidth / currentWidth) : baseSize;
+
+    textSize(adjustedSize);
+    text(currentText, width / 2, height / 2);
   }
 }
 
 function getLoadingText() {
-  // const baseText = 'loading';
-  const dots = ' -  '.repeat((Math.floor(frameCount / 5) % 100));
-  return dots + texts + dots;
+  // frameCount를 기준으로 점(dot) 애니메이션 추가
+  const dots = ' -  '.repeat(Math.floor(frameCount / 5) % 100);
+  return dots + loadingText + dots;
 }
-
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }
-
-// DOM 요소 준비된 후 Spline 씬 로딩 이벤트를 감지
-// document.addEventListener('DOMContentLoaded', () => {
-//   const loadingScreen = document.getElementById('loadingScreen');
-//   const viewer = document.querySelector('spline-viewer');
-
-//   // 씬 로딩 완료시 이벤트 감지
-//   viewer.addEventListener('sceneLoad', () => {
-//     loadingScreen.style.display = 'none'; // 로딩화면 숨기기
-//   });
-// });
