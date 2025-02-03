@@ -26,7 +26,7 @@ function draw() {
 
 function getLoadingText() {
   // const baseText = 'loading';
-  const dots = ' -  '.repeat((Math.floor(frameCount / 10) % 100));
+  const dots = ' -  '.repeat((Math.floor(frameCount / 5) % 100));
   return dots + texts + dots;
 }
 
